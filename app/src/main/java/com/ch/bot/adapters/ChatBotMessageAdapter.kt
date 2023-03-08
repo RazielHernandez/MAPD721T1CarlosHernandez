@@ -11,7 +11,8 @@ class ChatBotMessageAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var chatMessages: MutableList<BotMessage> = mutableListOf<BotMessage>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding = MessageViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = MessageViewBinding.inflate(
+            LayoutInflater.from(parent.context), parent, false)
         return ChatBotMessageHolder(binding)
     }
 

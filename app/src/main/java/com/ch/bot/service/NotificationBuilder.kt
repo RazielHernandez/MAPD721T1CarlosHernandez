@@ -44,7 +44,7 @@ class NotificationBuilder(context: Context, notificationManager: NotificationMan
         }
     }
 
-    fun sendNotification(title: String?, contentText: String?) {
+    fun sendNotification(title: String?, contentText: String?, id: Int) {
 
         val notificationIntent = Intent(context, MainActivity::class.java)
         val contentIntent = PendingIntent.getActivity(
@@ -68,7 +68,7 @@ class NotificationBuilder(context: Context, notificationManager: NotificationMan
             .build()
 
         // Add as notification
-        notificationMgr?.notify(0, notification)
+        notificationMgr?.notify(id, notification)
     }
 
 
